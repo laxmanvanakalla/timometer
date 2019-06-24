@@ -82,7 +82,10 @@ input{
 			var x="#"+m[i];
 			st=st+x;
 			//alert($(x).val());
-			sum=sum+parseInt($(x).val());
+			var val=parseInt($(x).val());
+			if(val==NaN)
+				val=0;
+			sum=sum+val;
 			if($(x).val()>0)
 				c++;
 		}
@@ -99,7 +102,7 @@ input{
 	{
 		var j=i+1;
 		var k=i-5;
-		var s='<div class="col-lg-12 col-xs-12"><span class="col-lg-3 col-xs-0"></span><span class="col-lg-1 col-xs-2 lab" >'+i+'-'+j+'</span><input onfocusout="trig('+i+')" onfocus="trig('+i+')"class="col-lg-5 col-xs-5 task"type="text" name="in1" ><input style="width:20px;height:auto" type="number" name="mrk" value=0 onfocusout="find()" id="'+m[i]+'" ><img  class="but col-lg-3 col-xs-3" id="'+b[i]+'" src="./checked.png"></div>';
+		var s='<div class="col-lg-12 col-xs-12"><span class="col-lg-3 col-xs-0"></span><span class="col-lg-1 col-xs-2 lab" >'+i+'-'+j+'</span><input onfocusout="trig('+i+')" onfocus="trig('+i+')"class="col-lg-5 col-xs-5 task"type="text" name="in1" ><input style="width:20px;height:auto" type="number" name="mrk"  onfocusout="find()" id="'+m[i]+'" ><img  class="but col-lg-3 col-xs-3" id="'+b[i]+'" src="./checked.png"></div>';
 		$( ".left" ).append(s);
 	}
 	for(var i=18;i<30;i++)
@@ -107,7 +110,7 @@ input{
 		if(i>=24)
 			i=i-24;
 		var j=i+1;
-		var s='<div class="col-lg-12 col-xs-12"><span class="col-lg-3 col-xs-0"></span><span class="col-lg-2 col-xs-2 lab" >'+i+'-'+j+'</span><input onfocusout="trig('+i+')" onfocus="trig('+i+')"class="col-lg-5 col-xs-5 task"type="text" name="in1" ><input style="width:20px;height:auto" type="number" name="mrk" value=0 onfocusout="find()" id="'+m[i]+'" ><img  class="but col-lg-3 col-xs-3" id="'+b[i]+'" src="./checked.png"></div>';
+		var s='<div class="col-lg-12 col-xs-12"><span class="col-lg-3 col-xs-0"></span><span class="col-lg-2 col-xs-2 lab" >'+i+'-'+j+'</span><input onfocusout="trig('+i+')" onfocus="trig('+i+')"class="col-lg-5 col-xs-5 task"type="text" name="in1" ><input style="width:20px;height:auto" type="number" name="mrk" onfocusout="find()" id="'+m[i]+'" ><img  class="but col-lg-3 col-xs-3" id="'+b[i]+'" src="./checked.png"></div>';
 		$( ".right" ).append(s);
 		if(i<18)
 			i=i+24;
