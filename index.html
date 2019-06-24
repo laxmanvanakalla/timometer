@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet">
 <link rel="icon" href="./time.png">
 </head>
-<body>
+<body onload="clear()" beforeunload="clear()">
 	<h1 style="font-family: 'Pacifico', cursive;color: red; text-align: center; ">TimoMeter</h1>
 	<p style="font-family: 'Pacifico', cursive;color: grey;text-align: center" >The only time you have is now</p>
 	<div class="col-lg-12 col-xs-12">
@@ -115,6 +115,10 @@ input{
 		$( ".right" ).append(s);
 		if(i<18)
 			i=i+24;
+	}
+	function clear()
+	{
+		localStorage.clear();
 	}
 </script>
 </html>
