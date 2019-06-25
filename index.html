@@ -99,11 +99,12 @@ input{
 			var x="#"+m[i];
 			st=st+x;
 			//alert($(x).val());
-			var val=parseInt($(x).val());
-			if(val==NaN)
-				val=0;
-			sum=sum+val;
-			if($(x).val()>0)
+			var va=parseInt($(x).val());
+			//alert(va);
+			if(isNaN(va))
+				va=0;
+			sum=sum+va;
+			if(va>0)
 				c++;
 		}
 
