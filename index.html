@@ -41,9 +41,9 @@
          <tr> 
             <td colspan="3"><input type="text" id="result"/></td> 
             <!-- clr() function will call clr to clear all value -->
-            <td><input type="button" value="c" onclick="clr()"/> </td> 
+            <td><input type="button" value="c" class="numbut" onclick="clr()"/> </td> 
          </tr> 
-         <tr> 
+         <tr class="slidbut" > 
             <!-- create button and assign value to each button -->
             <!-- dis("1") will call function dis to display value -->
             <td><input type="button" class="numbut" value="1" onclick="dis('1')"/> </td> 
@@ -51,19 +51,19 @@
             <td><input type="button" value="3" class="numbut" onclick="dis('3')"/> </td> 
             <td><input type="button" value="/" class="numbut" onclick="dis('/')"/> </td> 
          </tr> 
-         <tr> 
+         <tr class="slidbut" > 
             <td><input type="button" value="4" class="numbut" onclick="dis('4')"/> </td> 
             <td><input type="button" value="5" class="numbut" onclick="dis('5')"/> </td> 
             <td><input type="button" value="6" class="numbut"  onclick="dis('6')"/> </td> 
             <td><input type="button" value="-" class="numbut" onclick="dis('-')"/> </td> 
          </tr> 
-         <tr> 
+         <tr class="slidbut"> 
             <td><input type="button" value="7" class="numbut" onclick="dis('7')"/> </td> 
             <td><input type="button" value="8" class="numbut" onclick="dis('8')"/> </td> 
             <td><input type="button" value="9" class="numbut" onclick="dis('9')"/> </td> 
             <td><input type="button" value="+"  class="numbut" onclick="dis('+')"/> </td> 
          </tr> 
-         <tr> 
+         <tr class="slidbut"> 
             <td><input type="button" value="."  class="numbut" onclick="dis('.')"/> </td> 
             <td><input type="button" value="0"  class="numbut" onclick="dis('0')"/> </td> 
             <!-- solve function call function solve to evaluate value -->
@@ -153,6 +153,7 @@ input{
          function clr() 
          { 
              document.getElementById("result").value = "" 
+		 $("slidbut").slideToggle();
          } 
 	//end calculator
 	var m=["ut1","ut2","ut3","ut4","ut5","ut6","ut7","ut8","ut9","ut10","ut11","ut12","ut13","ut14","ut15","ut16","ut17","ut18","ut19","ut20","ut21","ut22","ut23","ut24"];
